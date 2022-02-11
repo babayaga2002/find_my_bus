@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                 children: <Widget>[
                   new ListTile(
                       leading: new Icon(Icons.photo_library),
-                      title: new Text('Photo Library'),
+                      title: new Text('Photo Library '),
                       onTap: () {
                         _imgFromGallery();
                         Navigator.of(context).pop();
