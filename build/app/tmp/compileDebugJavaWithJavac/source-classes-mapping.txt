@@ -1,0 +1,6 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/justhackit/find_my_bus/BuildConfig.java
+ com.justhackit.find_my_bus.BuildConfig
+com/justhackit/find_my_bus/MainActivity.java
+ com.justhackit.find_my_bus.MainActivity

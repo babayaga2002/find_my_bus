@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/sidharthchoudhary/StudioProjects/find_my_bus/build/path_provider_android/intermediates/res/merged/debug/values-ka/values-ka.xml",
+            "map": [
+                {
+                    "source": "/Users/sidharthchoudhary/.gradle/caches/transforms-3/fc4da947a9ad00b3ea6e5777293b74da/transformed/core-1.1.0/res/values-ka/values-ka.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/sidharthchoudhary/StudioProjects/find_my_bus/build/path_provider_android/intermediates/incremental/mergeDebugResources/merged.dir/values-ka/values-ka.xml",
+            "map": [
+                {
+                    "source": "/Users/sidharthchoudhary/.gradle/caches/transforms-3/fc4da947a9ad00b3ea6e5777293b74da/transformed/core-1.1.0/res/values-ka/values-ka.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>656284482433-pa3rbsvkt2pi5v85atu3u7eqjg5o95r9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.656284482433-pa3rbsvkt2pi5v85atu3u7eqjg5o95r9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD2G6RJqpiCO_EYKjI95o2CGIw1Uqx6Fzo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>656284482433</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.justhackit.findMyBus</string>
+	<key>PROJECT_ID</key>
+	<string>find-my-bus-8e5e9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>find-my-bus-8e5e9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:656284482433:ios:6fedfa7a1e6363815b8680</string>
+</dict>
+</plist>
