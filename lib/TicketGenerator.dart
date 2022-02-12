@@ -28,9 +28,18 @@ class ticketGeneration extends StatefulWidget {
 }
 
 class _ticketGenerationState extends State<ticketGeneration> {
+  final controller = ScrollController();
+  double offset = 0;
+  String start = '';
+  String end = '';
+  int num = 0;
+  bool approved = false;
+  Future<void> _showMyDialog(String name, String end, String start) async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
 
-          actions: <Widget>[
-            Row(
               children: [
                 TextButton(
                   child: const Text('Deny'),
