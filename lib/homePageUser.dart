@@ -12,6 +12,7 @@ import 'package:find_my_bus/QRCodeGenerator.dart';
 import 'package:find_my_bus/BusList.dart';
 import 'package:find_my_bus/bookHistory.dart';
 import 'dart:io';
+import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 
 class HomePage extends StatefulWidget {
   static final String id = 'home_page';
@@ -25,7 +26,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   final ImagePicker _picker = ImagePicker();
-
   XFile? _image;
   _imgFromCamera() async {
     XFile? image =
@@ -44,6 +44,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  String api_key = 'AIzaSyAjaN-Rfa7wRo4eW3lhUkTWy_O_WCQsnTY';
   void moveToBusList() async {
     final answer = await Navigator.push(
       context,
@@ -65,18 +66,91 @@ class _HomePageState extends State<HomePage> {
     );
     print(answer);
     if (answer != null) {
-      Polyline _poly = Polyline(
-        polylineId: PolylineId('Route'),
-        points: [
-          LatLng(lat, long),
-          answer,
-        ],
-        width: 5,
-      );
-      setState(() {
-        poly.add(_poly);
+      // Polyline _poly = Polyline(
+      //   polylineId: PolylineId('Route'),
+      //   points: [
+      //     LatLng(lat, long),
+      //     answer,
+      //   ],
+      //   width: 5,
+      // );
+      // setState(() {
+      //   poly.add(_poly);
+      // });
+      await _zoomPolyline(answer);
+    }
+  }
+
+  _zoomPolyline(LatLng ans) async {
+    double startLatitude = lat;
+    double startLongitude = long;
+
+    double destinationLatitude = ans.latitude;
+    double destinationLongitude = ans.longitude;
+    double miny = (startLatitude <= destinationLatitude)
+        ? startLatitude
+        : destinationLatitude;
+    double minx = (startLongitude <= destinationLongitude)
+        ? startLongitude
+        : destinationLongitude;
+    double maxy = (startLatitude <= destinationLatitude)
+        ? destinationLatitude
+        : startLatitude;
+    double maxx = (startLongitude <= destinationLongitude)
+        ? destinationLongitude
+        : startLongitude;
+
+    double southWestLatitude = miny;
+    double southWestLongitude = minx;
+
+    double northEastLatitude = maxy;
+    double northEastLongitude = maxx;
+
+    // Accommodate the two locations within the
+    // camera view of the map
+    mapController.animateCamera(
+      CameraUpdate.newLatLngBounds(
+        LatLngBounds(
+          northeast: LatLng(northEastLatitude, northEastLongitude),
+          southwest: LatLng(southWestLatitude, southWestLongitude),
+        ),
+        100.0,
+      ),
+    );
+
+    await _createPolylines(startLatitude, startLongitude, destinationLatitude,
+        destinationLongitude);
+  }
+
+  late PolylinePoints polylinePoints;
+  List<LatLng> polylineCoordinates = [];
+
+  _createPolylines(double startlat, double startlong, double destlat,
+      double destlong) async {
+    polylinePoints = PolylinePoints();
+    PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
+      api_key,
+      PointLatLng(startlat, startlong),
+      PointLatLng(destlat, destlong),
+      travelMode: TravelMode.transit,
+    );
+
+    if (result.points.isNotEmpty) {
+      result.points.forEach((PointLatLng point) {
+        polylineCoordinates.add(LatLng(point.latitude, point.longitude));
       });
     }
+
+    PolylineId id = PolylineId('poly');
+    Polyline polyline = Polyline(
+      polylineId: id,
+      color: Colors.blue,
+      points: polylineCoordinates,
+      width: 3,
+    );
+    setState(() {
+      poly.add(polyline);
+    });
   }
 
   int seatNumber = 0;

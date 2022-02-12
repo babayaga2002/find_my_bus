@@ -4,6 +4,23 @@
             "outputFile": "/Users/sidharthchoudhary/StudioProjects/find_my_bus/build/google_maps_flutter/intermediates/res/merged/debug/values-ml/values-ml.xml",
             "map": [
                 {
+                    "source": "/Users/sidharthchoudhary/.gradle/caches/transforms-3/848489e51d9de23f098d6b162619a157/transformed/core-1.6.0/res/values-ml/values-ml.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2955",
+                        "endColumns": "100",
+                        "endOffsets": "3051"
+                    }
+                },
+                {
                     "source": "/Users/sidharthchoudhary/.gradle/caches/transforms-3/519f0e6dc1996a842dac5625922c4fb1/transformed/jetified-play-services-base-17.0.0/res/values-ml/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
@@ -35,23 +52,6 @@
                         "startOffsets": "1321",
                         "endColumns": "218",
                         "endOffsets": "1535"
-                    }
-                },
-                {
-                    "source": "/Users/sidharthchoudhary/.gradle/caches/transforms-3/fc4da947a9ad00b3ea6e5777293b74da/transformed/core-1.1.0/res/values-ml/values-ml.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "2955",
-                        "endColumns": "100",
-                        "endOffsets": "3051"
                     }
                 }
             ]
@@ -60,6 +60,23 @@
             "outputFile": "/Users/sidharthchoudhary/StudioProjects/find_my_bus/build/google_maps_flutter/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml",
             "map": [
                 {
+                    "source": "/Users/sidharthchoudhary/.gradle/caches/transforms-3/848489e51d9de23f098d6b162619a157/transformed/core-1.6.0/res/values-ml/values-ml.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2955",
+                        "endColumns": "100",
+                        "endOffsets": "3051"
+                    }
+                },
+                {
                     "source": "/Users/sidharthchoudhary/.gradle/caches/transforms-3/519f0e6dc1996a842dac5625922c4fb1/transformed/jetified-play-services-base-17.0.0/res/values-ml/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
@@ -91,23 +108,6 @@
                         "startOffsets": "1321",
                         "endColumns": "218",
                         "endOffsets": "1535"
-                    }
-                },
-                {
-                    "source": "/Users/sidharthchoudhary/.gradle/caches/transforms-3/fc4da947a9ad00b3ea6e5777293b74da/transformed/core-1.1.0/res/values-ml/values-ml.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "2955",
-                        "endColumns": "100",
-                        "endOffsets": "3051"
                     }
                 }
             ]

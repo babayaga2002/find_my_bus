@@ -75,7 +75,7 @@
 44    <application
 44-->/Users/sidharthchoudhary/StudioProjects/find_my_bus/android/app/src/main/AndroidManifest.xml:3:4-42:19
 45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-45-->[androidx.core:core:1.5.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/438c90e91ee616ef6165277f72680251/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+45-->[androidx.core:core:1.6.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/848489e51d9de23f098d6b162619a157/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 46        android:debuggable="true"
 47        android:icon="@mipmap/ic_launcher"
 47-->/Users/sidharthchoudhary/StudioProjects/find_my_bus/android/app/src/main/AndroidManifest.xml:5:9-43
@@ -135,11 +135,11 @@
 82        </activity>
 83
 84        <meta-data
-84-->/Users/sidharthchoudhary/StudioProjects/find_my_bus/android/app/src/main/AndroidManifest.xml:35:8-36:69
+84-->/Users/sidharthchoudhary/StudioProjects/find_my_bus/android/app/src/main/AndroidManifest.xml:35:9-36:70
 85            android:name="com.google.android.geo.API_KEY"
-85-->/Users/sidharthchoudhary/StudioProjects/find_my_bus/android/app/src/main/AndroidManifest.xml:35:19-64
+85-->/Users/sidharthchoudhary/StudioProjects/find_my_bus/android/app/src/main/AndroidManifest.xml:35:20-65
 86            android:value="AIzaSyA07vDQTd20yPJQ56Rd1ZadnRJtZqu8vhg" />
-86-->/Users/sidharthchoudhary/StudioProjects/find_my_bus/android/app/src/main/AndroidManifest.xml:36:12-67
+86-->/Users/sidharthchoudhary/StudioProjects/find_my_bus/android/app/src/main/AndroidManifest.xml:36:13-68
 87        <!--
 88             Don't delete the meta-data below.
 89             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
@@ -358,20 +358,33 @@
 203            android:value="@integer/google_play_services_version" />
 203-->[com.google.android.gms:play-services-basement:17.1.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/3bac441f1edb6a2ff1ea7e29dd374e63/transformed/jetified-play-services-basement-17.1.0/AndroidManifest.xml:25:13-66
 204
-205        <activity
-205-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:47:9-53:63
-206            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-206-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:48:13-74
-207            android:clearTaskOnLaunch="true"
-207-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:49:13-45
-208            android:screenOrientation="sensorLandscape"
-208-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:50:13-56
-209            android:stateNotNeeded="true"
-209-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:51:13-42
-210            android:theme="@style/zxing_CaptureTheme"
-210-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:52:13-54
-211            android:windowSoftInputMode="stateAlwaysHidden" />
-211-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:53:13-60
-212    </application>
-213
-214</manifest>
+205        <uses-library
+205-->[androidx.window:window:1.0.0-beta04] /Users/sidharthchoudhary/.gradle/caches/transforms-3/aa718b9a49950990b1dbde9dab5df508/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+206            android:name="androidx.window.extensions"
+206-->[androidx.window:window:1.0.0-beta04] /Users/sidharthchoudhary/.gradle/caches/transforms-3/aa718b9a49950990b1dbde9dab5df508/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+207            android:required="false" />
+207-->[androidx.window:window:1.0.0-beta04] /Users/sidharthchoudhary/.gradle/caches/transforms-3/aa718b9a49950990b1dbde9dab5df508/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+208        <uses-library
+208-->[androidx.window:window:1.0.0-beta04] /Users/sidharthchoudhary/.gradle/caches/transforms-3/aa718b9a49950990b1dbde9dab5df508/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+209            android:name="androidx.window.sidecar"
+209-->[androidx.window:window:1.0.0-beta04] /Users/sidharthchoudhary/.gradle/caches/transforms-3/aa718b9a49950990b1dbde9dab5df508/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+210            android:required="false" />
+210-->[androidx.window:window:1.0.0-beta04] /Users/sidharthchoudhary/.gradle/caches/transforms-3/aa718b9a49950990b1dbde9dab5df508/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+211
+212        <activity
+212-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:47:9-53:63
+213            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+213-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:48:13-74
+214            android:clearTaskOnLaunch="true"
+214-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:49:13-45
+215            android:screenOrientation="sensorLandscape"
+215-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:50:13-56
+216            android:stateNotNeeded="true"
+216-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:51:13-42
+217            android:theme="@style/zxing_CaptureTheme"
+217-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:52:13-54
+218            android:windowSoftInputMode="stateAlwaysHidden" />
+218-->[com.journeyapps:zxing-android-embedded:4.2.0] /Users/sidharthchoudhary/.gradle/caches/transforms-3/93156d1ece2d5de9741e6a890b31261d/transformed/jetified-zxing-android-embedded-4.2.0/AndroidManifest.xml:53:13-60
+219    </application>
+220
+221</manifest>
