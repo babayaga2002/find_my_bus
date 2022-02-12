@@ -39,7 +39,17 @@ class _ticketGenerationState extends State<ticketGeneration> {
       context: context,
       barrierDismissible: false,
       builder: (BuildContext context) {
-
+        return AlertDialog(
+          title: const Text('Add New Group'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text('Approve Ticket For : $name \n From : $start \n To: $end'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            Row(
               children: [
                 TextButton(
                   child: const Text('Deny'),
