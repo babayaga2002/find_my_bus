@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:find_my_bus/my_header.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:find_my_bus/constants.dart';
 
 class Booking extends StatefulWidget {
@@ -35,7 +38,9 @@ class _BookingState extends State<Booking> {
     });
   }
 
-  @override
+
+  
+    @override
   void initState() {
     super.initState();
     _getUserData();
@@ -48,6 +53,11 @@ class _BookingState extends State<Booking> {
     });
   }
 
+  
+  
+  
+  
+  
   Widget getwidget() {
     if (name.length != 0) {
       return PreventCard(
@@ -58,7 +68,7 @@ class _BookingState extends State<Booking> {
     return Center(
       child: Container(
         padding: EdgeInsets.all(40.0),
-        child: Text("No Bookings Found", textAlign: TextAlign.center),
+        child: Text("No Bookings Found", textAlign:     TextAlign.center),
       ),
     );
   }
@@ -70,7 +80,8 @@ class _BookingState extends State<Booking> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  
+  Widget build(BuildContext   context) {
     _getUserData();
     return Scaffold(
       appBar: AppBar(
@@ -108,6 +119,10 @@ class _BookingState extends State<Booking> {
   }
 }
 
+
+
+
+
 class PreventCard extends StatelessWidget {
   final String image;
   final String title;
@@ -118,7 +133,6 @@ class PreventCard extends StatelessWidget {
     required this.title,
     required this.text,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -161,12 +175,15 @@ class PreventCard extends StatelessWidget {
                     Text(
                       title,
                       style: kTitleTextstyle.copyWith(
-                        fontSize: 20,
+                        fontSize: 21,
+                        
+                        
                       ),
                     ),
+                    
                     Expanded(
                       child: Text(
-                        text,
+                        text  ,
                         maxLines: 4,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
