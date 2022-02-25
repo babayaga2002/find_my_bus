@@ -106,8 +106,6 @@ class _HomePageState extends State<HomePage> {
     double northEastLatitude = maxy;
     double northEastLongitude = maxx;
 
-    // Accommodate the two locations within the
-    // camera view of the map
     mapController.animateCamera(
       CameraUpdate.newLatLngBounds(
         LatLngBounds(
@@ -300,9 +298,9 @@ class _HomePageState extends State<HomePage> {
     _addMarker(
         widget.email, _locationData!.latitude!, _locationData!.longitude!);
     setState(() {
-      mapToggle = true;
       lat = _locationData!.latitude!;
       long = _locationData!.longitude!;
+      mapToggle = true;
     });
     FirebaseFirestore.instance
         .collection('userlocations')
@@ -371,19 +369,16 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.6,
-            width: double.infinity,
-            child: mapToggle
-                ? GoogleMap(
-                    onMapCreated: onMapCreate,
-                    initialCameraPosition: CameraPosition(
-                        target: LatLng(30.9331, 74.6225), zoom: 15),
-                    markers: markers.toSet(),
-                    polylines: poly.toSet(),
-                    trafficEnabled: true,
-                  )
-                : Center(child: CircularProgressIndicator()),
-          ),
+              height: MediaQuery.of(context).size.height * 0.6,
+              width: double.infinity,
+              child: GoogleMap(
+                onMapCreated: onMapCreate,
+                initialCameraPosition:
+                    CameraPosition(target: LatLng(0, 0), zoom: 15),
+                markers: markers.toSet(),
+                polylines: poly.toSet(),
+                trafficEnabled: true,
+              )),
           DraggableScrollableSheet(
             initialChildSize: 0.35,
             minChildSize: 0.35,
