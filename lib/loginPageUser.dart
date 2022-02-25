@@ -10,7 +10,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:find_my_bus/homePageUser.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({Key? key}) :  super(key: key);
   static String id = 'login_screen';
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -22,9 +22,9 @@ class _LoginPageState extends State<LoginPage> {
   String pass = '';
   Future<File> urlToFile(String imageUrl) async {
     Uri myUri = Uri.parse(imageUrl);
-    var rng = new Random();
+    var rng = new Random()  ;
     Directory tempDir = await getTemporaryDirectory();
-    String tempPath = tempDir.path;
+    String tempPath = tempDir.path ;
     File file = new File('$tempPath' + (rng.nextInt(100)).toString() + '.png');
     http.Response response = await http.get(myUri);
     await file.writeAsBytes(response.bodyBytes);
@@ -32,7 +32,8 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   UserCredential? userCredential;
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return Material(
       child: Stack(
         children: [
@@ -47,8 +48,10 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
             ),
-          ),
-          Container(
+          ), 
+          
+          
+                 Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 0.8,
             decoration: BoxDecoration(
@@ -59,6 +62,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
+   
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -72,13 +76,13 @@ class _LoginPageState extends State<LoginPage> {
                   child: Hero(
                     tag: 'logo',
                     child: Image.asset(
-                      'images/city-bus-map-application-mobile-phone-flat-cartoon-vector-illustration-puplic-transport-route-around-town-urban-150468065.jpg',
+                        'images/city-bus-map-application-mobile-phone-flat-cartoon-vector-illustration-puplic-transport-route-around-town-urban-150468065.jpg',
                     ),
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(
+                padding: const EdgeInsets.only  (
                   top: 50.0,
                   left: 15.0,
                   right: 15.0,
@@ -101,10 +105,10 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(
-                  top: 30.0,
-                  left: 15.0,
-                  right: 15.0,
+                padding: const EdgeInsets.onl y(
+                  top: 31.0,
+                  left: 14.0,
+                  right: 13.0,
                 ),
                 child: TextField(
                   autofocus: true,
@@ -118,7 +122,9 @@ class _LoginPageState extends State<LoginPage> {
                       Icons.lock,
                     ),
                   ),
-                  onChanged: (value) {
+                  onChanged: (value) 
+                  
+                  {
                     pass = value;
                     print(pass);
                   },
@@ -130,7 +136,8 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     Navigator.pushNamed(context, ForgotPage.id);
                   },
-                  child: Text(
+                  child:
+                  Text(
                     'Forgot Password ?     ',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -180,140 +187,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               SizedBox(
-                height: 120.0,
+                height: 130.0,
               ),
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //     MaterialButton(
-              //       enableFeedback: false,
-              //       shape: CircleBorder(),
-              //       onPressed: () async {
-              //         final GoogleSignInAccount? googleUser =
-              //             await GoogleSignIn().signIn();
-              //         final GoogleSignInAuthentication? googleAuth =
-              //             await googleUser?.authentication;
-              //         final credential = GoogleAuthProvider.credential(
-              //           accessToken: googleAuth?.accessToken,
-              //           idToken: googleAuth?.idToken,
-              //         );
-              //         userCredential = await FirebaseAuth.instance
-              //             .signInWithCredential(credential);
-              //         if (userCredential != null) {
-              //           print(userCredential);
-              //           email = googleUser!.email;
-              //           FirebaseFirestore.instance
-              //               .collection('users')
-              //               .doc(email)
-              //               .set({
-              //             'name': googleUser.displayName,
-              //             'email': email,
-              //             'mobile': '',
-              //           }).then((value) async {
-              //             try {
-              //               await FirebaseStorage.instance
-              //                   .ref('$email/profile.png')
-              //                   .putFile(await urlToFile(googleUser.photoUrl));
-              //             } on FirebaseException catch (err) {
-              //               print(err);
-              //             }
-              //             print("User Added");
-              //           });
-              //           Navigator.pushNamed(context, HomePage.id);
-              //         }
-              //       },
-              //       child: SvgPicture.asset(
-              //         'images/google.svg',
-              //         fit: BoxFit.fill,
-              //       ),
-              //     ),
-              //     MaterialButton(
-              //       onPressed: () async {
-              //         final LoginResult result =
-              //             await FacebookAuth.instance.login();
-              //         final OAuthCredential credential =
-              //             FacebookAuthProvider.credential(
-              //                 result.accessToken!.token);
-              //         userCredential = await FirebaseAuth.instance
-              //             .signInWithCredential(credential);
-              //         final userData =
-              //             await FacebookAuth.instance.getUserData();
-              //         if (userCredential != null) {
-              //           print(userCredential);
-              //           email = userData['email'];
-              //           FirebaseFirestore.instance
-              //               .collection('users')
-              //               .doc(email)
-              //               .set({
-              //             'name': userData['name'],
-              //             'email': email,
-              //             'mobile': '',
-              //           }).then((value) async {
-              //             try {
-              //               await FirebaseStorage.instance
-              //                   .ref('$email/profile.png')
-              //                   .putFile(await urlToFile(
-              //                       userData['picture']['data']['url']));
-              //             } on FirebaseException catch (err) {
-              //               print(err);
-              //             }
-              //             print("User Added");
-              //           });
-              //           Navigator.pushNamed(context, HomePage.id);
-              //         }
-              //       },
-              //       shape: CircleBorder(),
-              //       child: SvgPicture.asset(
-              //         'images/fb.svg',
-              //         fit: BoxFit.fill,
-              //       ),
-              //     ),
-              //     // MaterialButton(
-              //     //   shape: CircleBorder(),
-              //     //   onPressed: () async {
-              //     //     final authResult = await twitterLogin.login();
-              //     //     final twitterAuthCredential =
-              //     //         TwitterAuthProvider.credential(
-              //     //       accessToken: authResult.authToken!,
-              //     //       secret: authResult.authTokenSecret!,
-              //     //     );
-              //     //     // Once signed in, return the UserCredential
-              //     //     userCredential = await FirebaseAuth.instance
-              //     //         .signInWithCredential(twitterAuthCredential);
-              //     //     if (userCredential != null) {
-              //     //       print(userCredential);
-              //     //       email = authResult.user!.email;
-              //     //       FirebaseFirestore.instance
-              //     //           .collection('users')
-              //     //           .doc(email)
-              //     //           .set({
-              //     //         'name': authResult.user!.name,
-              //     //         'email': email,
-              //     //         'mobile': '',
-              //     //       }).then((value) async {
-              //     //         try {
-              //     //           await FirebaseStorage.instance
-              //     //               .ref('$email/profile.png')
-              //     //               .putFile(await urlToFile(
-              //     //                   authResult.user!.thumbnailImage));
-              //     //         } on FirebaseException catch (err) {
-              //     //           print(err);
-              //     //         }
-              //     //         print("User Added");
-              //     //       });
-              //     //       Navigator.pushNamed(context, HomePage.id);
-              //     //     }
-              //     //   },
-              //     //   child: SvgPicture.asset(
-              //     //     'images/twitter.svg',
-              //     //     fit: BoxFit.fill,
-              //     //   ),
-              //     // ),
-              //   ],
-              // ),
-              // SizedBox(
-              //   height: 10.0,
-              // ),
+            
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
